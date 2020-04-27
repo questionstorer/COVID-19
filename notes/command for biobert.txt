@@ -1,0 +1,18 @@
+
+download link
+https://drive.google.com/uc?id=
+
+
+large
+https://drive.google.com/file/d/1GJpGjQj6aZPV-EfbiQELpBkvlGtoKiyA/view?usp=sharing
+base
+https://drive.google.com/file/d/1R84voFKHfWV9xjzeLzWBbmY1uOMYpnyD/view
+
+/opt/conda/envs/biobert/bin/python -m ipykernel install --prefix=/home/jupyter/.local/share/jupyter --name 'python-biobert'
+
+
+bio_bert_large_1000k.ckpt.data-00000-of-00001   model.ckpt.data-00000-of-00001
+bio_bert_large_1000k.ckpt.index     model.ckpt.index
+bio_bert_large_1000k.ckpt.meta      model.ckpt.meta
+
+python run_re.py --task_name=$TASK_NAME --do_train=true --do_eval=true --do_predict=true --vocab_file=$BIOBERT_DIR/vocab.txt --bert_config_file=$BIOBERT_DIR/bert_config.json --init_checkpoint=$BIOBERT_DIR/model.ckpt --max_seq_length=128 --train_batch_size=32 --learning_rate=2e-5 --num_train_epochs=3.0 --do_lower_case=false --data_dir=$RE_DIR --output_dir=$OUTPUT_DIR
