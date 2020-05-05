@@ -1,0 +1,36 @@
+[
+    {
+        "head": {
+            "CUI": "C0005911",
+            "word": "weight changes",
+            "start": 64,
+            "length": 14,
+            "split_start": 7
+        },
+        "tail": {
+            "CUI": "C0005910",
+            "word": "weight",
+            "start": 121,
+            "length": 6,
+            "split_start": 19
+        },
+        "sentence": "zeranol implants did not significantly affect marketing-transit weight changes , but increased ( p less than .05 ) daily weight gains at all time periods in both trials .",
+        "relation": "NA",
+        "lexical_feature0": "marketing-transit|weight|changes|,|but|increased|(|p|less|than|.05|)|daily|weight|gains",
+        "lexical_feature1": "affect|marketing-transit|weight|changes|,|but|increased|(|p|less|than|.05|)|daily|weight|gains|at",
+        "lexical_feature2": "significantly|affect|marketing-transit|weight|changes|,|but|increased|(|p|less|than|.05|)|daily|weight|gains|at|all",
+        "syntactic_feature0": "weight|2|compound",
+        "syntactic_feature1": "changes|0|root",
+        "syntactic_feature2": ",|5|punct",
+        "syntactic_feature3": "but|5|cc",
+        "syntactic_feature4": "increased|2|conj",
+        "syntactic_feature5": "(|7|punct",
+        "syntactic_feature6": "p|2|parataxis",
+        "syntactic_feature7": "less|10|advmod",
+        "syntactic_feature8": "than|8|fixed",
+        "syntactic_feature9": ".05|7|nmod",
+        "syntactic_feature10": ")|7|punct",
+        "syntactic_feature11": "daily|13|amod",
+        "syntactic_feature12": "weight|2|parataxis"
+    }
+]
