@@ -1,0 +1,44 @@
+{
+    "relations": [
+        {
+            "subject__cui": "C0439663",
+            "subject__label": "Infected",
+            "subject__sem_types": [
+                "fndg"
+            ],
+            "subject__sem_type": "fndg",
+            "subject__score": "888",
+            "predicate__type": "MOD/HEAD",
+            "predicate": "PROCESS_OF",
+            "negation": "",
+            "object__cui": "C1257890",
+            "object__label": "Population Group",
+            "object__sem_types": [
+                "popg",
+                "humn"
+            ],
+            "object__sem_type": "humn",
+            "object__score": "888"
+        },
+        {
+            "subject__cui": "C1545588",
+            "subject__label": "Protection",
+            "subject__sem_types": [
+                "fndg"
+            ],
+            "subject__sem_type": "fndg",
+            "subject__score": "853",
+            "predicate__type": "MOD/HEAD",
+            "predicate": "PROCESS_OF",
+            "negation": "",
+            "object__cui": "C1257890",
+            "object__label": "Population Group",
+            "object__sem_types": [
+                "popg",
+                "humn"
+            ],
+            "object__sem_type": "humn",
+            "object__score": "853"
+        }
+    ]
+}

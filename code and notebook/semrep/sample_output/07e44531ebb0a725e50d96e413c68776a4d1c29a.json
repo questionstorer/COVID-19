@@ -1,0 +1,102 @@
+{
+    "relations": [
+        {
+            "subject__cui": "C1276877",
+            "subject__label": "Specialized cell structure",
+            "subject__sem_types": [
+                "celc"
+            ],
+            "subject__sem_type": "celc",
+            "subject__score": "1000",
+            "predicate__type": "PREP",
+            "predicate": "PART_OF",
+            "negation": "",
+            "object__cui": "C0227263",
+            "object__label": "Small intestine epithelium",
+            "object__sem_types": [
+                "bpoc"
+            ],
+            "object__sem_type": "bpoc",
+            "object__score": "1000"
+        },
+        {
+            "subject__cui": "C1171322",
+            "subject__label": "Adult Stem Cells",
+            "subject__sem_types": [
+                "cell"
+            ],
+            "subject__sem_type": "cell",
+            "subject__score": "916",
+            "predicate__type": "MOD/HEAD",
+            "predicate": "PART_OF",
+            "negation": "",
+            "object__cui": "C0021853",
+            "object__label": "Intestines",
+            "object__sem_types": [
+                "bpoc"
+            ],
+            "object__sem_type": "bpoc",
+            "object__score": "916"
+        },
+        {
+            "subject__cui": "C1421544",
+            "subject__label": "XPO1 gene",
+            "subject__sem_types": [
+                "gngm",
+                "aapp"
+            ],
+            "subject__sem_type": "gngm",
+            "subject__score": "851",
+            "predicate__type": "MOD/HEAD",
+            "predicate": "PART_OF",
+            "negation": "",
+            "object__cui": "C0402574",
+            "object__label": "Exporter",
+            "object__sem_types": [
+                "prog",
+                "humn"
+            ],
+            "object__sem_type": "humn",
+            "object__score": "851"
+        },
+        {
+            "subject__cui": "C1421544",
+            "subject__label": "XPO1 gene",
+            "subject__sem_types": [
+                "gngm",
+                "aapp"
+            ],
+            "subject__sem_type": "gngm",
+            "subject__score": "851",
+            "predicate__type": "VERB",
+            "predicate": "AFFECTS",
+            "negation": "",
+            "object__cui": "C1820289",
+            "object__label": "stem cell fate commitment",
+            "object__sem_types": [
+                "celf"
+            ],
+            "object__sem_type": "celf",
+            "object__score": "1000"
+        },
+        {
+            "subject__cui": "C1964257",
+            "subject__label": "Observation - diagnostic procedure",
+            "subject__sem_types": [
+                "diap"
+            ],
+            "subject__sem_type": "diap",
+            "subject__score": "1000",
+            "predicate__type": "PREP",
+            "predicate": "DIAGNOSES",
+            "negation": "",
+            "object__cui": "C0376545",
+            "object__label": "Hematologic Neoplasms",
+            "object__sem_types": [
+                "neop"
+            ],
+            "object__sem_type": "neop",
+            "object__score": "1000"
+        }
+    ]
+}
