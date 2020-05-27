@@ -1,8 +1,10 @@
 import subprocess
 import os
+import mysql.connector
+
 
 setting = {"semrep_path":"path","semrep_cmd":"cmd"}
-
+entity_types = set(['T047', 'T028', 'T121', 'T103', 'T184'])
 # mapping for parsing results
 mappings = {
         "text": {
@@ -68,3 +70,62 @@ class SemRep:
                     results['relations'].append(tmp)
         return results
 
+
+def filter_relations(cursor, relations):
+    '''
+        filter relations based on entity type.
+        current valid entity types are in entity_types
+        relation is a list consisting of dictionary with keys: subject_cui, object_cui, predicate
+    '''
+    filtered_relations = []
+    
+    for relation in relations:
+        if verify_entity(cursor, relation[0],entity_types) and verify_entity(cursor, relation[2],entity_types):
+            # split relation by ( to get rid of (SPEC), (INFE)
+            relation = (relation[0], relation[1].split("(")[0], relation[2])
+            filtered_relations.append(relation)
+        
+            
+    return filtered_relations
+
+def filter_entities(cursor, entities):
+    filtered_entities = []
+    for entity in entities:
+        if verify_entity(cursor, entity[2], entity_types):
+            filtered_entities.append(entity)
+    return filtered_entities
+
+
+
+def get_types(cursor, cui):
+    '''
+        get semantic type of an entity
+    '''
+    query = ("select tui from umls.mrsty where cui=%s")
+    cursor.execute(query, (cui,))
+    
+    tuis = set()
+    
+    for message in cursor:
+        tuis.add(message[0])
+    return tuis
+    
+def get_oneof_type(cursor, cui,entity_types):
+    '''
+        get one of the semantic type in the entity_type if multiple types are returned
+    '''
+    tuis = get_types(cursor, cui)
+    types = tuis.intersection(entity_types)
+    return types
+    
+    
+def verify_entity(cursor, cui, entity_types):
+    '''
+        verify cui is one of the entity_types
+    '''
+    tuis = get_types(cursor, cui)
+    
+    if tuis.isdisjoint(entity_types):
+        return False
+    else:
+        return True
